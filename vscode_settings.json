@@ -1,0 +1,83 @@
+{
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "workbench.colorTheme": "One Dark Pro",
+
+  "javascript.preferences.quoteStyle": "single",
+
+  "typescript.preferences.quoteStyle": "single",
+
+  "workbench.iconTheme": "material-icon-theme",
+
+  "window.zoomLevel": 0,
+
+  // "editor.insertSpaces": false,
+
+  "eslint.alwaysShowStatus": true,
+  // "eslint.run": "onSave",
+  // "eslint.debug": true,
+  // "eslint.format.enable": true,
+  "eslint.validate": ["typescript", "javascript"],
+
+  "editor.dragAndDrop": false,
+
+  "editor.find.loop": false,
+  "editor.detectIndentation": false,
+  "window.restoreWindows": "none",
+  "explorer.openEditors.visible": 0,
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "code-runner.runInTerminal": true,
+
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, UseTab: Never, IndentWidth: 4, TabWidth: 4, AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false, ColumnLimit: 0, AccessModifierOffset: -4 }",
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "editor.tabSize": 4
+  },
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.executorMap": {
+    "javascript": "node",
+    // "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "cpp": "cd $dir && g++ $fileName -o $fileName.bin && $dir$fileName.bin",
+    "python": "python -u",
+    "ruby": "ruby",
+    "shellscript": "bash",
+    "typescript": "ts-node",
+    "r": "Rscript",
+    "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+    "racket": "racket",
+    "dart": "dart",
+    "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    "haskell": "runhaskell",
+    "nim": "nim compile --verbosity:0 --hints:off --run",
+    "lisp": "sbcl --script",
+    "sass": "sass --style expanded",
+    "scss": "scss --style expanded",
+    "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css"
+  },
+  "todo-tree.tree.showScanModeButton": false,
+
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "search.maintainFileSearchCache": true,
+  "search.quickOpen.includeSymbols": true,
+  "search.searchEditor.reusePriorSearchConfiguration": true,
+
+  "prettier.printWidth": 100,
+  "prettier.trailingComma": "all",
+  "prettier.singleQuote": true
+}
