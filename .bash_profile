@@ -1,10 +1,10 @@
 START_TIME=`date +%s%3N`
 HOST_NAME=minima
-shopt -s autocd
+export GPG_TTY=$(tty)
 
 bind 'set completion-ignore-case on'
 
-export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/bin:$HOME/.yarn/bin
 
 export HISTSIZE=5000
 export HISTFILESIZE=10000
@@ -49,21 +49,19 @@ function mkcd()
 # Aliases
 # -------
 
-alias node_load='source ~/.nvm/nvm.sh && nvm use stable'
+alias loadnode='source ~/.nvm/nvm.sh && nvm use stable'
+alias loadgo='source ~/.gvm/scripts/gvm && gvm use 1.16'
+alias loadpython='source  ~/.venv/general/bin/activate'
+alias load='loadnode && loadgo'
 
 alias cls='clear'
 
 alias c='code'
-alias ns='npm start'
-alias nr='npm run'
-alias nd='npm run dev'
-alias ndw='npm run dev-watch'
-alias nis='npm i -S'
-alias nid='npm i -D'
 alias l="ls --color=auto" # List files in current directory
 alias ll="ls -al --color=auto" # List all files in current directory in long list format
 alias e="nemo" # Open the current directory in file explorer
-
+alias calc="python"
+alias spicetify="~/spicetify-cli/spicetify"
 # ----------------------
 # Git Aliases
 # ----------------------
@@ -81,5 +79,8 @@ alias gss='git status -s'
 alias gs='echo ""; echo "*********************************************"; echo -e "   DO NOT FORGET TO PULL BEFORE COMMITTING"; echo "*********************************************"; echo ""; git status'
 alias bat="batcat"
 
+
+
 END_TIME=`date +%s%3N`
 echo `expr $END_TIME - $START_TIME` ms 
+
