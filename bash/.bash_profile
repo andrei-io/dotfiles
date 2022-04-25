@@ -1,6 +1,6 @@
 START_TIME=`date +%s%3N`
 HOST_NAME=oni
-# DO NOT REMOVE: git needs this to sign commitss
+# DO NOT REMOVE: git needs this to sign commits
 export GPG_TTY=$(tty)
 
 bind 'set completion-ignore-case on'
@@ -37,10 +37,7 @@ print_before_the_prompt () {
 PROMPT_COMMAND=print_before_the_prompt
 PS1="$EMOJI >"
 
-fortune | cowsay -f tux | lolcat
-
-function mkcd()
-{
+function mkcd() {
     mkdir $1 && cd $1
 }
 
@@ -77,7 +74,7 @@ alias gss='git status -s'
 alias gs='echo ""; echo "*********************************************"; echo -e "   DO NOT FORGET TO PULL BEFORE COMMITTING"; echo "*********************************************"; echo ""; git status'
 alias bat="batcat"
 
-
+fortune | cowsay -f tux | lolcat
 
 END_TIME=`date +%s%3N`
 echo `expr $END_TIME - $START_TIME` ms 
