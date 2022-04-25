@@ -126,8 +126,8 @@
     }
   },
   "githubPullRequests.createOnPublishBranch": "never",
-	"githubPullRequests.fileListLayout": "tree",
-	"[html]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	}
+  "githubPullRequests.fileListLayout": "tree",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
