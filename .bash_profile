@@ -1,19 +1,20 @@
 START_TIME=`date +%s%3N`
-HOST_NAME=minima
+HOST_NAME=minimal
+# DO NOT REMOVE: git needs this to sign commitss
 export GPG_TTY=$(tty)
 
 bind 'set completion-ignore-case on'
 
-export PATH=$PATH:$HOME/bin:$HOME/.yarn/bin
+export PATH=$PATH:$HOME/bin:$HOME/.yarn/bin:$HOME/.local/bin:~/Programs/flutter/bin
 
 export HISTSIZE=5000
 export HISTFILESIZE=10000
 export HISTIGNORE="ls:cls:clear:e:cd:mv:l:ls:ll:mkcd:history"
+export BAT_THEME="OneHalfDark"
 
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
-export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
 txtred='\e[0;31m' # Red
@@ -30,12 +31,10 @@ print_before_the_prompt () {
     dir=$PWD
     home=$HOME
     dir=${dir/"$HOME"/"~"}
-    # Initial in loc de bldgrn era txtred
     printf "\n $bldgrn%s: $bldpur%s $txtgrn%s\n$txtrst" "$HOST_NAME" "$dir" "$(vcprompt)"
 }
 
 PROMPT_COMMAND=print_before_the_prompt
-PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 PS1="$EMOJI >"
 
 fortune | cowsay -f tux | lolcat
@@ -49,10 +48,11 @@ function mkcd()
 # Aliases
 # -------
 
-alias loadnode='source ~/.nvm/nvm.sh && nvm use stable'
-alias loadgo='source ~/.gvm/scripts/gvm && gvm use 1.16'
+alias loadnode='source ~/.nvm/nvm.sh'
+alias loadgo='source ~/.gvm/scripts/gvm && gvm use 1.17'
 alias loadpython='source  ~/.venv/general/bin/activate'
-alias load='loadnode && loadgo'
+alias loadjvm='source ~/.sdkman/bin/sdkman-init.sh'
+alias load='loadnode && loadgo && loadjvm'
 
 alias cls='clear'
 
@@ -60,7 +60,7 @@ alias c='code'
 alias l="ls --color=auto" # List files in current directory
 alias ll="ls -al --color=auto" # List all files in current directory in long list format
 alias e="nemo" # Open the current directory in file explorer
-alias calc="python"
+alias calc="ipython"
 alias spicetify="~/spicetify-cli/spicetify"
 # ----------------------
 # Git Aliases

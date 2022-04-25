@@ -10,5 +10,8 @@ dotfiles() {
   
   ln -f ~/.dotfiles/.bash_profile ~/.bash_profile
   ln -f ~/.dotfiles/.gitconfig ~/.gitconfig
+  # TODO: make project generator read symlinks
+  # for now i copy it
+  cp -r project-templates/ ~/.project-templates
 }
 dotfiles

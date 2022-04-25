@@ -1,108 +1,133 @@
 {
-	"[javascript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode",
-		"editor.codeActionsOnSave": {
-			"source.organizeImports": true
-		},
-	},
-	"[typescript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode",
-		"editor.codeActionsOnSave": {
-			"source.organizeImports": true
-		},
-	},
-	"[vue]": {
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[sql]": {
+    "editor.insertSpaces": true
+  },
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, UseTab: Never, IndentWidth: 4, TabWidth: 4, AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false, ColumnLimit: 0, AccessModifierOffset: -4 }",
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4
+  },
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.insertSpaces": true
+  },
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.insertSpaces": false,
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate": ["typescript", "javascript"],
+  "editor.dragAndDrop": false,
+  "editor.find.loop": false,
+  "editor.detectIndentation": false,
+  "window.restoreWindows": "none",
+  "explorer.openEditors.visible": 0,
+  "editor.tabSize": 2,
+  "[go]": {
+    "editor.insertSpaces": false,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    // "editor.defaultFormatter": "golang.go",
+    "editor.tabSize": 4
+  },
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": ["--fast"],
+  "code-runner.runInTerminal": true,
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.executorMap": {
+    "javascript": "node",
+    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "cpp": "cd $dir && g++ $fileName -o $fileName.bin && $dir$fileName.bin && rm $dir$fileName.bin",
+    "python": "python -u",
+    "typescript": "ts-node",
+    "dart": "dart"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "prompt",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "search.quickOpen.includeSymbols": true,
+  "search.searchEditor.reusePriorSearchConfiguration": true,
+  "prettier.printWidth": 100,
+  "prettier.trailingComma": "all",
+  "prettier.singleQuote": true,
+  "todo-tree.general.tags": ["BUG", "HACK", "FIXME", "TODO", "XXX", "REFACTOR"],
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "editor.linkedEditing": true,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "workbench.colorTheme": "Horizon",
+  "editor.fontFamily": "JetBrains Mono",
+  "gitlens.hovers.currentLine.over": "line",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first"
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/.hg/store/**": true,
+    "**/docker_data/**": true
+  },
+  "explorer.compactFolders": false,
+  "dart.debugExternalPackageLibraries": false,
+  "dart.debugSdkLibraries": false,
+  "errorLens.enabledDiagnosticLevels": ["error", "info"],
+  "editor.formatOnSave": true,
+  "javascript.preferences.useAliasesForRenames": false,
+  "typescript.preferences.useAliasesForRenames": false,
+  "files.exclude": {
+    "**/node_modules": true
+  },
+  "gitlens.hovers.enabled": false,
+  "gitlens.statusBar.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "workbench.activityBar.visible": true,
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "bash",
+      "icon": "terminal-bash",
+      "args": ["-l"]
+    }
+  },
+  "githubPullRequests.createOnPublishBranch": "never",
+	"githubPullRequests.fileListLayout": "tree",
+	"[html]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[json]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[yaml]": {
-		"editor.insertSpaces": true
-	},
-	"C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, UseTab: Never, IndentWidth: 4, TabWidth: 4, AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false, ColumnLimit: 0, AccessModifierOffset: -4 }",
-	"[cpp]": {
-		"editor.defaultFormatter": "ms-vscode.cpptools",
-		"editor.tabSize": 4
-	},
-	"[python]": {
-		"editor.tabSize": 4,
-		"editor.defaultFormatter": "ms-python.python"
-	},
-	"javascript.preferences.quoteStyle": "single",
-	"typescript.preferences.quoteStyle": "single",
-	"workbench.iconTheme": "material-icon-theme",
-	"editor.insertSpaces": false,
-	"eslint.alwaysShowStatus": true,
-	"eslint.validate": [
-		"typescript",
-		"javascript"
-	],
-	"editor.dragAndDrop": false,
-	"editor.find.loop": false,
-	"editor.detectIndentation": false,
-	"window.restoreWindows": "none",
-	"explorer.openEditors.visible": 0,
-	"editor.tabSize": 2,
-	"[go]": {
-		"editor.insertSpaces": false,
-		"editor.formatOnSave": true,
-		"editor.codeActionsOnSave": {
-			"source.organizeImports": true
-		},
-		"editor.defaultFormatter": "golang.go",
-		"editor.tabSize": 4
-	},
-	"editor.formatOnSave": true,
-	"code-runner.runInTerminal": true,
-	"code-runner.clearPreviousOutput": true,
-	"code-runner.executorMap": {
-		"javascript": "node",
-		"c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-		"cpp": "cd $dir && g++ $fileName -o $fileName.bin && $dir$fileName.bin && rm $dir$fileName.bin",
-		"python": "python -u",
-		"ruby": "ruby",
-		"shellscript": "bash",
-		"typescript": "ts-node",
-		"r": "Rscript",
-		"rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
-		"racket": "racket",
-		"dart": "dart",
-		"pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
-		"d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
-		"haskell": "runhaskell",
-		"nim": "nim compile --verbosity:0 --hints:off --run",
-		"lisp": "sbcl --script",
-		"sass": "sass --style expanded",
-		"scss": "scss --style expanded",
-		"less": "cd $dir && lessc $fileName $fileNameWithoutExt.css"
-	},
-	"javascript.updateImportsOnFileMove.enabled": "always",
-	"typescript.updateImportsOnFileMove.enabled": "always",
-	"editor.multiCursorModifier": "ctrlCmd",
-	"search.maintainFileSearchCache": true,
-	"search.quickOpen.includeSymbols": true,
-	"search.searchEditor.reusePriorSearchConfiguration": true,
-	"prettier.printWidth": 100,
-	"prettier.trailingComma": "all",
-	"prettier.singleQuote": true,
-	"todo-tree.general.tags": [
-		"BUG",
-		"HACK",
-		"FIXME",
-		"TODO",
-		"XXX",
-		"REFACTOR"
-	],
-	"todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
-	"workbench.colorTheme": "Horizon",
-	"editor.linkedEditing": true,
-	"workbench.editorAssociations": [
-		{
-			"viewType": "jupyter.notebook.ipynb",
-			"filenamePattern": "*.ipynb"
-		}
-	],
-
-
+	}
 }

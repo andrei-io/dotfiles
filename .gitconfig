@@ -1,5 +1,12 @@
 [user]
 	name = AndreiIonica
-	email = 40264929+AndreiIonica@users.noreply.github.com
+	email = 40264929+andrei-io@users.noreply.github.com
+	signingkey = 8B005076E1D261023A98C7B2810308CF45ACDA7F
 [core]
 	editor = subl -w
+[commit]
+	gpgSign = true
+[tag]
+	gpgSign = true
+[pull]
+	rebase = true

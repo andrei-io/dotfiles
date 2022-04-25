@@ -1,0 +1,12 @@
+{
+  "name": "my_ts_node_app",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js",
+    "dev": "tsc && node build/index.js",
+    "dev-watch": "tsc --watch & nodemon build"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
