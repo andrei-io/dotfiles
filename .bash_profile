@@ -1,5 +1,5 @@
 START_TIME=`date +%s%3N`
-HOST_NAME=minimal
+HOST_NAME=oni
 # DO NOT REMOVE: git needs this to sign commitss
 export GPG_TTY=$(tty)
 
@@ -48,11 +48,9 @@ function mkcd()
 # Aliases
 # -------
 
-alias loadnode='source ~/.nvm/nvm.sh'
-alias loadgo='source ~/.gvm/scripts/gvm && gvm use 1.17'
 alias loadpython='source  ~/.venv/general/bin/activate'
-alias loadjvm='source ~/.sdkman/bin/sdkman-init.sh'
-alias load='loadnode && loadgo && loadjvm'
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
 
 alias cls='clear'
 
