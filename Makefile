@@ -3,7 +3,7 @@ all: git bash git vscode
 
 bash:
 	@echo "Syncing bash config"
-	stow bash
+	stow bash --no-folding
 	@echo
 
 git:

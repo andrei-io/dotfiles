@@ -1,0 +1,33 @@
+#!/bin/bash
+
+declare -A ALLOWED_EXTENSIONS=(
+	[pdf]=1 [txt]=1
+)
+
+if [[ ! -e $1 ]]; then
+	echo "File $1 does not exist"
+	exit 1
+fi
+
+# String magic for getting filename
+filename="${1##*/}"
+# Check if filename has extension(check if '.' appears)
+if [[ ! $1 =~ '.' ]] ; then 
+	echo "File has no extension"
+	exit 1
+fi
+
+# Remove everything behind '.' in filename
+extension="${filename##*.}"
+
+# String magic to check if extension is allowed
+if [[ -z "${ALLOWED_EXTENSIONS[$extension]}" ]]; then
+	echo "Extension is not allowed"
+	exit 1
+fi
+
+echo "Printing odd pages"
+lp -o page-set=odd -n 1 "$1"
+read -p "Press enter to continue..."
+echo "Printing even pages"
+lp -o page-set=even -o orientation-requested=6 -o outputorder=reverse -n 1 "$1"
