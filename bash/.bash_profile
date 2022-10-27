@@ -5,7 +5,7 @@ export GPG_TTY=$(tty)
 
 bind 'set completion-ignore-case on'
 
-export PATH=$PATH:$HOME/bin:$HOME/.yarn/bin:$HOME/.local/bin:~/Programs/flutter/bin
+export PATH=$PATH:$HOME/bin:$HOME/.yarn/bin:$HOME/.local/bin:~/Programs/flutter/bin:$HOME/.spicetify
 
 export HISTSIZE=5000
 export HISTFILESIZE=10000
@@ -55,8 +55,7 @@ alias c='code'
 alias l="ls --color=auto" # List files in current directory
 alias ll="ls -al --color=auto" # List all files in current directory in long list format
 alias e="nemo" # Open the current directory in file explorer
-alias calc="ipython"
-alias spicetify="~/spicetify-cli/spicetify"
+alias calc="ipython3"
 # ----------------------
 # Git Aliases
 # ----------------------

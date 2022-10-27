@@ -1,7 +1,7 @@
 [user]
 	name = AndreiIonica
 	email = 40264929+andrei-io@users.noreply.github.com
-	signingkey = 8B005076E1D261023A98C7B2810308CF45ACDA7F
+	signingkey = 50AB707A70B216C98ADA7906A3D59BEE5036708A
 [core]
 	editor = subl -w
 [commit]
@@ -10,3 +10,5 @@
 	gpgSign = true
 [pull]
 	rebase = true
+[init]
+	defaultBranch = main

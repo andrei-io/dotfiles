@@ -21,7 +21,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[sql]": {
     "editor.insertSpaces": true
@@ -129,5 +129,11 @@
   "githubPullRequests.fileListLayout": "tree",
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "editor.bracketPairColorization.enabled": false,
+  "volar.takeOverMode.enabled": false,
+  "arduino.additionalUrls": [
+    "https://raw.githubusercontent.com/sparkfun/Arduino_Boards/master/IDE_Board_Manager/package_sparkfun_index.json"
+  ],
+  "python.formatting.provider": "black"
 }
